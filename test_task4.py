@@ -23,5 +23,5 @@ class TestDoThreeThings(TestCase):
         t2 = threading.Thread(target=d.second, args=[self.some_action_2])
         t3 = threading.Thread(target=d.first, args=[self.some_action_1])
 
-        for t in [t1, t2, t3]:  # type: Thread
+        for t in [t1, t2, t3]:  # type: threading.Thread
             t.start()
